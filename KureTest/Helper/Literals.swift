@@ -8,5 +8,5 @@
 
 
 class Literals {
-static let currentUserId = "886900testTest"  // we will get it after authentication in real app
+static let currentUserId = "My Name Sender"  // we will get it after authentication in real app
 }

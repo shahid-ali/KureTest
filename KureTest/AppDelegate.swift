@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	private func setup()
 	{
 		FirebaseApp.configure()
-		SBDMain.initWithApplicationId("BFDCEDE0-4F1F-486A-8988-C089A657CEE1")
+		SBDMain.initWithApplicationId("") // update senderbird id
 		
 		SBDMain.connect(withUserId: Literals.currentUserId, completionHandler: { (user, error) in
 			guard error == nil else {

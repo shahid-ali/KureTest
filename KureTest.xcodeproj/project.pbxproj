@@ -18,7 +18,6 @@
 		A705731D26AAFFCF000272D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A705731B26AAFFCF000272D6 /* LaunchScreen.storyboard */; };
 		A705732826AAFFCF000272D6 /* KureTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705732726AAFFCF000272D6 /* KureTestTests.swift */; };
 		A705733326AAFFD0000272D6 /* KureTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A705733226AAFFD0000272D6 /* KureTestUITests.swift */; };
-		A7B3BCB826AB02B5003E4372 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7B3BCB726AB02B5003E4372 /* GoogleService-Info.plist */; };
 		A7B3BCBE26AB034E003E4372 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3BCBD26AB034E003E4372 /* FirestoreManager.swift */; };
 		A7B3BCC026AB04F6003E4372 /* UserListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3BCBF26AB04F6003E4372 /* UserListVM.swift */; };
 		A7B3BCC226AB0503003E4372 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B3BCC126AB0503003E4372 /* User.swift */; };
@@ -76,7 +75,6 @@
 		A705732E26AAFFD0000272D6 /* KureTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KureTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A705733226AAFFD0000272D6 /* KureTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KureTestUITests.swift; sourceTree = "<group>"; };
 		A705733426AAFFD0000272D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7B3BCB726AB02B5003E4372 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A7B3BCBD26AB034E003E4372 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		A7B3BCBF26AB04F6003E4372 /* UserListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVM.swift; sourceTree = "<group>"; };
 		A7B3BCC126AB0503003E4372 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 				A7B3BCE126AB2C63003E4372 /* Helper */,
 				A7B3BCCA26AB1505003E4372 /* Views */,
 				A7B3BCBC26AB032A003E4372 /* Datamanager */,
-				A7B3BCB726AB02B5003E4372 /* GoogleService-Info.plist */,
 				A705730D26AAFFC9000272D6 /* AppDelegate.swift */,
 				A705730F26AAFFC9000272D6 /* SceneDelegate.swift */,
 				A705731326AAFFC9000272D6 /* Main.storyboard */,
@@ -397,7 +394,6 @@
 				A705731D26AAFFCF000272D6 /* LaunchScreen.storyboard in Resources */,
 				A705731A26AAFFCF000272D6 /* Assets.xcassets in Resources */,
 				A705731526AAFFC9000272D6 /* Main.storyboard in Resources */,
-				A7B3BCB826AB02B5003E4372 /* GoogleService-Info.plist in Resources */,
 				A7B3BCC726AB0CD2003E4372 /* UserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,6 +29,8 @@ class ChatVM {
 				return
 			}
 			self?.channel=groupChannel
+			
+			// we need to load chat history here
 			completionHandler(nil)
 		})
 	}
