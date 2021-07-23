@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>880900664877-c1nuvh7sj06ig2a88be6ksjf57n5q5te.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.880900664877-c1nuvh7sj06ig2a88be6ksjf57n5q5te</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>880900664877-2etja7pqq2rontpr6k1h2ijo73mfp81h.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyArALjaoUDmErwY7SVWt4xdjKK9E01Nl64</string>
+	<key>GCM_SENDER_ID</key>
+	<string>880900664877</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>KureNetwork.KureStag</string>
+	<key>PROJECT_ID</key>
+	<string>kure-dev-191711</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kure-dev-191711.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:880900664877:ios:6ffccf12dcc82a5d</string>
+	<key>DATABASE_URL</key>
+	<string>https://kure-dev-191711.firebaseio.com</string>
+</dict>
+</plist>

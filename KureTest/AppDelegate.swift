@@ -7,14 +7,16 @@
 
 import UIKit
 import CoreData
+import Firebase
+import SendBirdSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		
+		setup()
 		return true
 	}
 
@@ -32,6 +34,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 	}
 
+	
+	private func setup()
+	{
+		FirebaseApp.configure()
+		SBDMain.initWithApplicationId("BFDCEDE0-4F1F-486A-8988-C089A657CEE1")
+		
+		SBDMain.connect(withUserId: Literals.currentUserId, completionHandler: { (user, error) in
+			guard error == nil else {
+				// Handle error.
+				return
+			}
+			print("connected to SendBird SDK")
+		})
+	}
+	
 	// MARK: - Core Data stack
 
 	lazy var persistentContainer: NSPersistentContainer = {
