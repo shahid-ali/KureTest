@@ -7,7 +7,7 @@
 
 import SendBirdSDK
 
-class ChatVM {
+class ChatVM:NSObject {
 
 	private var receiverUser:User
 	private var currentUserId:String
@@ -29,10 +29,14 @@ class ChatVM {
 				return
 			}
 			self?.channel=groupChannel
-			
 			// we need to load chat history here
 			completionHandler(nil)
 		})
+	}
+	
+	func addMessage(message:SBDUserMessage)
+	{
+		self.messages.append(message)
 	}
 	
 	func sendText(message:String,completion:@escaping(Error?)->Void)
@@ -72,3 +76,7 @@ class ChatVM {
 	}
 	
 }
+
+
+
+

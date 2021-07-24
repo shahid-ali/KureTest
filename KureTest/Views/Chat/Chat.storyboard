@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z4H-kv-nKc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="788"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="778"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="azg-QF-38G" id="txU-KG-RzI"/>
@@ -25,12 +25,12 @@
                                 </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Type message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qkX-FQ-7oI" userLabel="chatTF">
-                                <rect key="frame" x="10" y="832" width="324" height="30"/>
+                                <rect key="frame" x="10" y="822" width="324" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjW-Ml-1NG" userLabel="sendButton">
-                                <rect key="frame" x="334" y="832" width="80" height="30"/>
+                                <rect key="frame" x="334" y="822" width="80" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Jwk-Ma-N5V"/>
                                 </constraints>
@@ -46,7 +46,7 @@
                             <constraint firstItem="NjW-Ml-1NG" firstAttribute="leading" secondItem="qkX-FQ-7oI" secondAttribute="trailing" id="6bu-0x-7sg"/>
                             <constraint firstItem="z4H-kv-nKc" firstAttribute="bottom" secondItem="qkX-FQ-7oI" secondAttribute="top" id="8eN-yp-XJh"/>
                             <constraint firstItem="qkX-FQ-7oI" firstAttribute="bottom" secondItem="NjW-Ml-1NG" secondAttribute="bottom" id="Ldl-s8-Iaq"/>
-                            <constraint firstItem="qkX-FQ-7oI" firstAttribute="bottom" secondItem="6vG-e5-lUM" secondAttribute="bottom" id="Sik-1d-Avr"/>
+                            <constraint firstItem="qkX-FQ-7oI" firstAttribute="bottom" secondItem="6vG-e5-lUM" secondAttribute="bottom" constant="-10" id="Sik-1d-Avr"/>
                             <constraint firstItem="z4H-kv-nKc" firstAttribute="leading" secondItem="6vG-e5-lUM" secondAttribute="leading" id="T1j-uf-X3o"/>
                             <constraint firstItem="qkX-FQ-7oI" firstAttribute="top" secondItem="NjW-Ml-1NG" secondAttribute="top" id="TWo-nm-2mT"/>
                             <constraint firstItem="NjW-Ml-1NG" firstAttribute="trailing" secondItem="6vG-e5-lUM" secondAttribute="trailing" id="V1t-wY-FQQ"/>

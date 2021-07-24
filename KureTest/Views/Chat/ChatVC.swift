@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SendBirdSDK
 
 class ChatVC: UIViewController {
   
@@ -27,6 +28,8 @@ class ChatVC: UIViewController {
 	{
 		if let user=user
 		{
+			title=user.name
+			
 			tableView.register(UINib(nibName:"TextMessageIncomingCell", bundle:nil), forCellReuseIdentifier: "TextMessageIncomingCell")
 			
 			tableView.register(UINib(nibName:"TextMessageOutgoingCell", bundle:nil), forCellReuseIdentifier: "TextMessageOutgoingCell")
@@ -43,6 +46,8 @@ class ChatVC: UIViewController {
 				}
 				
 			})
+			
+			SBDMain.add(self as SBDChannelDelegate, identifier: Literals.currentUserId)
 		}
 	}
 	
@@ -76,17 +81,20 @@ extension ChatVC:UITableViewDataSource
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
 	{
 		guard let message=viewModel?.getMessage(at:indexPath.row),
-			  let type=message.customType else {return UITableViewCell()}
+			  let mobileNumber=user?.mobileNumber,
+			  let senderId=message.sender?.userId
+			  else {return UITableViewCell()}
 		
 		
-		if type == MessageSource.incoming.rawValue,
+		
+		
+		if mobileNumber == senderId,
 		   let  incomingCell=tableView.dequeueReusableCell(withIdentifier:"TextMessageIncomingCell", for: indexPath) as? TextMessageIncomingCell
 		{
 			incomingCell.message=message
 			return incomingCell
 		}
-		else if type == MessageSource.outgoing.rawValue,
-		let  outgoingCell=tableView.dequeueReusableCell(withIdentifier:"TextMessageOutgoingCell", for: indexPath) as? TextMessageOutgoingCell
+		else if let  outgoingCell=tableView.dequeueReusableCell(withIdentifier:"TextMessageOutgoingCell", for: indexPath) as? TextMessageOutgoingCell
 		{
 			outgoingCell.message=message
 			return outgoingCell
@@ -116,3 +124,25 @@ extension ChatVC:UITableViewDelegate
 
 }
 
+// ViewController.swift
+extension ChatVC:SBDChannelDelegate {
+	
+	func channel(_ sender: SBDBaseChannel, didReceive message: SBDBaseMessage) {
+		if let message=message as? SBDUserMessage
+		{
+			viewModel?.addMessage(message:message)
+			tableView.reloadData()
+		}
+	}
+
+	func channel(_ sender: SBDBaseChannel, didUpdate message: SBDBaseMessage) {
+	}
+
+	func channel(_ sender: SBDBaseChannel, messageWasDeleted messageId: Int64) {
+	}
+
+	func channel(_ channel: SBDBaseChannel, didReceiveMention message: SBDBaseMessage) {
+	}
+
+	
+}
